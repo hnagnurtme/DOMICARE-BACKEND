@@ -1,31 +1,55 @@
+<p align="center" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 15px;">
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" height="55" title="React" />
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiSqT1SJ2-10Nt4SfENScW41TuQBkqvHpApsNeBw6h44_KLbyCywu8NO_y_d4ug6bfLFPKM-z0groqAkCdzBy9oS1GTxpOI_IU0YEANjFETgemUnLKqTZnxAgqQtEJ3aWHEVfyxMmAK4fA/s1600/spring-boot-logo.png" height="55" title="Spring Boot" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP5BaOYcOW7WwQHHIzIjxfyH1giTa3_KSrJQ&s" height="55" style="border-radius:10px;" title="Cloudinary" />
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ5ME3FQKPOVK6xNfgIdxPNfVYyqGQi5G73Q&s" height="55" style="border-radius:10px;" title="Postgres" />
+</p>
+
+
+
+
+
 # DomiCare - Professional Cleaning & Maintenance Platform
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![Status](https://img.shields.io/badge/status-in%20development-yellow.svg) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-2.7+-green.svg) ![JDK](https://img.shields.io/badge/JDK-11+-orange.svg)
 
 > **A modern, transparent, and secure platform connecting customers with professional cleaning and maintenance services.**
 
-**Webiste :** [https://domicare.hnagnurtme.id.vn](https://domicare.hnagnurtme.id.vn)
+> Developed by **Domicare-Team** for the
+>
+> <h4 align="center">
+>   <a href="#" target="_blank">
+>      Project-Based Learning 3 (PBL3) – DUT
+>   </a>
+> </h4>
 
 ---
 
-## Table of Contents
+## Quick Start
 
-- [About](#about)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Configuration](#configuration)
-- [Screenshots](#screenshots)
-- [License](#license)
+```bash
+# Clone the repository
+git clone https://github.com/hnagnurtme/DomiCare.git
+
+cd DomiCare
+# Configure environment variables
+cp .env.example .env
+# Edit .env with your API keys and credentials
+
+# Start all services with Docker Compose
+docker compose up -d
+
+# View logs
+docker compose logs -f
+
+
+```
+**What's included:**
+- Frontend (React + Vite) → http://localhost:3000
+- Backend (Spring Boot) → http://localhost:8080
 
 ---
 
-## About
-
-DomiCare is a web-based API platform for managing and booking cleaning services with role-based access for customers, sales staff, and administrators. It features a cloud-hosted PostgreSQL database (Railway), secure authentication with JWT, Spring Security, and OAuth2, real-time updates via WebSocket, email verification and notifications, RESTful APIs with three-layer architecture, Swagger documentation, and Dockerized deployment on Render.
-
----
-
-## Features
+## Key Features
 
 | **Role** | **Functions** | **Test Account** |
 |-----------|----------------|------------------|
@@ -35,179 +59,121 @@ DomiCare is a web-based API platform for managing and booking cleaning services 
 
 ---
 
-## Getting Started
+## Screenshots
 
-### Prerequisites
-- JDK 11+
-- PostgreSQL 12+
-- Maven 3.6+
+### Home Page
+<p align="center">
+  <img src="docs/image/image-login.png" alt="Login Page" width="800"/>
+  <br/>
+  <em>User authentication and login interface</em>
+</p>
 
-### Installation
+<p align="center">
+  <img src="docs/image/image-homepage.png" alt="Home Page" width="800"/>
+  <br/>
+  <em>Main landing page with service overview</em>
+</p>
 
-#### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/domicare.git
-cd domicare
-```
+<p align="center">
+  <img src="docs/image/image-gioithieu.png" alt="Intro / About" width="800"/>
+  <br/>
+  <em>About section introducing DomiCare services</em>
+</p>
 
-#### 2. Backend Setup
-```bash
-cd backend
+### Products Page
+<p align="center">
+  <img src="docs/image/image-search.png" alt="All Products" width="800"/>
+  <br/>
+  <em>Service search and filtering functionality</em>
+</p>
 
-# Create database
-createdb domicare
+<p align="center">
+  <img src="docs/image/image-fullproduct.png" alt="Products Grid" width="800"/>
+  <br/>
+  <em>Complete product catalog view</em>
+</p>
 
-# Configure application-local.properties (see Configuration section)
+### Admin / Dashboard
+<p align="center">
+  <img src="docs/image/image-dashboard.png" alt="Admin Dashboard" width="800"/>
+  <br/>
+  <em>Administrative dashboard with analytics and metrics</em>
+</p>
 
-# Run the application
-./mvnw spring-boot:run -Dspring-boot.run.profiles=local
-```
+<p align="center">
+  <img src="docs/image/image-donhang.png" alt="Admin Orders" width="800"/>
+  <br/>
+  <em>Order management interface for administrators</em>
+</p>
 
-Backend will run on `http://localhost:8080`
+<p align="center">
+  <img src="docs/image/image-admin-dichvu.png" alt="Admin Services" width="800"/>
+  <br/>
+  <em>Service management and configuration panel</em>
+</p>
 
-#### 3. Frontend Setup
-```bash
-cd frontend
+### Admin - Staff & Management
+<p align="center">
+  <img src="docs/image/image-admin-nhanvien.png" alt="Admin Staff" width="800"/>
+  <br/>
+  <em>Staff management and personnel overview</em>
+</p>
 
-# Install dependencies
-npm install
+<p align="center">
+  <img src="docs/image/image-admin-update.png" alt="Admin Update Form" width="800"/>
+  <br/>
+  <em>User and staff information update interface</em>
+</p>
 
-# Start development server
-npm start
-```
+### User / Mobile Views
+<p align="center">
+  <img src="docs/image/image-user-lichsu-tatca.png" alt="Bookings History (User)" width="800"/>
+  <br/>
+  <em>User booking history and transaction records</em>
+</p>
 
-Frontend will run on `http://localhost:3000`
+<p align="center">
+  <img src="docs/image/image-matkhau.png" alt="Mobile - Reset Password / Email" width="800"/>
+  <br/>
+  <em>Password recovery and email verification flow</em>
+</p>
 
----
+<p align="center">
+  <img src="docs/image/image-thongbao.png" alt="Notifications / Toasts" width="800"/>
+  <br/>
+  <em>Real-time notification system</em>
+</p>
 
-## Configuration
+### Sales / Notifications
+<p align="center">
+  <img src="docs/image/image-sale-donhang.png" alt="Sales - Orders" width="800"/>
+  <br/>
+  <em>Sales staff order management interface</em>
+</p>
 
-Create `backend/src/main/resources/application-local.properties`:
+<p align="center">
+  <img src="docs/image/image-tuvan.png" alt="Consultation / Requests" width="800"/>
+  <br/>
+  <em>Customer consultation and service request handling</em>
+</p>
 
-```properties
-# Database
-spring.datasource.url=jdbc:postgresql://localhost:5432/domicare
-spring.datasource.username=your_username
-spring.datasource.password=your_password
+## Technology Stack
 
-# JWT
-jwt.secret=your-secret-key-min-256-bits
-jwt.expiration=86400000
+### Backend
+- Spring Boot
+- Spring Security with JWT Authentication
+- Hibernate & JPA
+- RESTful API Design
 
-# Email (Gmail)
-spring.mail.host=smtp.gmail.com
-spring.mail.port=587
-spring.mail.username=your-email@gmail.com
-spring.mail.password=your-app-password
+### Frontend
+- React 18 + TypeScript
+- Vite 5
+- TailwindCSS 3
 
-# OAuth2 Google
-spring.security.oauth2.client.registration.google.client-id=your-client-id
-spring.security.oauth2.client.registration.google.client-secret=your-client-secret
+### Database & Storage
+- PostgreSQL
+- Cloudinary for media storage
 
-# Cloudinary
-cloudinary.cloud-name=your-cloud-name
-cloudinary.api-key=your-api-key
-cloudinary.api-secret=your-api-secret
-```
+## Team
 
----
-
-## 📸 Screenshots
-
-<details>
-  <summary>Home Page</summary>
-
-  ![Login Page](docs/image/image-login.png)
-  ![Home Page](docs/image/image-homepage.png)
-  ![Intro / About](docs/image/image-gioithieu.png)
-</details>
-
-<details>
-  <summary>Products Page</summary>
-
-  ![All Products](docs/image/image-search.png)
-  ![Products Grid](docs/image/image-fullproduct.png)
-</details>
-
-<details>
-  <summary>Admin / Dashboard</summary>
-
-  ![Admin Dashboard](docs/image/image-dashboard.png)
-  ![Admin Orders](docs/image/image-donhang.png)
-  ![Admin Services](docs/image/image-admin-dichvu.png)
-</details>
-
-<details>
-  <summary>Admin - Staff & Management</summary>
-
-  ![Admin Staff](docs/image/image-admin-nhanvien.png)
-  ![Admin Update Form](docs/image/image-admin-update.png)
-</details>
-
-<details>
-  <summary>User / Mobile Views</summary>
-
-  ![Bookings History (User)](docs/image/image-user-lichsu-tatca.png)
-  ![Mobile - Reset Password / Email](docs/image/image-matkhau.png)
-  ![Notifications / Toasts](docs/image/image-thongbao.png)
-</details>
-
-<details>
-  <summary>Sales / Notifications</summary>
-
-  ![Sales - Orders](docs/image/image-sale-donhang.png)
-  ![Consultation / Requests](docs/image/image-tuvan.png)
-</details>
-
----
-
-## Deployment
-
-### Using Docker
-```bash
-docker-compose up -d
-```
-
-### Manual Deployment
-```bash
-# Build backend
-cd backend
-./mvnw clean package
-java -jar target/domicare-0.0.1-SNAPSHOT.jar
-
-# Build frontend
-cd frontend
-npm run build
-```
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## Contact
-
-- **Website:** [https://domicare.hnagnurtme.id.vn](https://domicare.hnagnurtme.id.vn)
-- **Email:** domicare.company@gmail.com
-- **GitHub:** [@hnagnurtme](https://github.com/hnagnurtme)
-
----
-
-<div align="center">
-  Made with care by DomiCare Team
-</div>
+Built with ❤️ by **DomiCare Team**:
